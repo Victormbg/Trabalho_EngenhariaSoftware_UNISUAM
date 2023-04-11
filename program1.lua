@@ -1,19 +1,11 @@
-function ValidarIdade(Idade)
-    if Idade > 18 then
-        return true;
-    else
-        return false;
-    end
-end
-print("---SISTEMA DE CADASTRO---");
-io.write("Digite o nome do aluno: ");
-Nome = io.read();
-io.write("Digite a idade do aluno: ");
-Idade = io.read("n");
-Res = ValidarIdade(Idade);
-print(Res)
-if Res == true then
-    print("O aluno " .. Nome .. " e maior de idade.");
-else
-    print("O aluno " .. Nome .. " e menor de idade.");
-end
+function ValidarMaiorValor(num1, num2, num3) return math.max(num1, num2, num3); end
+print("---PROGRAMA PARA VERIFICAR MAIOR VALOR ENTRE 3 NUMEROS---");
+io.write("Digite o primeiro valor: ");
+num1 = io.read("n");
+io.write("Digite o primeiro valor: ");
+num2 = io.read("n");
+io.write("Digite o primeiro valor: ");
+num3 = io.read("n");
+resultado = ValidarMaiorValor(num1, num2, num3);
+io.write("O maior valor entre os números ", num1, ", ", num2, ", ", num3,
+         " é: ", resultado, '\n')
